@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
+import type Tema from "../../../models/Tema";
 
-function CardTemas() {
+interface CardTemasProps{
+  tema: Tema
+}
+
+function CardTemas( { tema }: CardTemasProps ) {
   return (
     <div className='rounded-2xl overflow-hidden'>
-      <h2 className='py-2 px-6 bg-indigo-800 text-white font-bold'>Tema</h2>
-      <p className='p-8 text-3x1 bg-slate-200'>Descrição</p>
+      <h2 className='py-2 px-6 bg-indigo-800 text-white font-bold'>Tema {tema.id}</h2>
+      <p className='p-8 text-3x1 bg-slate-200'>{tema.descricao}</p>
       <div className='flex'>
         <Link to=''
         className='w-full bg-indigo-400 hover:bg-indigo-800  text-white flex items-center justify-center py-2'>
