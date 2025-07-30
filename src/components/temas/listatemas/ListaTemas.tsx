@@ -33,7 +33,6 @@ function ListaTemas() {
       alert('Você precisa estar logado!')
       navigate('/')
     }
-
   }, [token])
 
   useEffect(() => {
